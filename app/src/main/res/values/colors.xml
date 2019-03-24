@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FCFCFC</color>
+    <color name="colorPrimaryDark">#818181</color>
+    <color name="colorAccent">#0D7AFF</color>
+
+    <color name="Primarylight">#ABFCFCFC</color>
+    <color name="titleColor">#333333</color>
+    <color name="textColor">#757575</color>
+
+    <color name="recorderbg">#0D7AFF</color>
+    <color name="mainColor">#0D7AFF</color>
+</resources>
