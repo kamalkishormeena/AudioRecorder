@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
-        if (getSupportActionBar() != null) {
+   /*     if (getSupportActionBar() != null) {
             getSupportActionBar().setBackgroundDrawable(
                     new ColorDrawable(ContextCompat.getColor(this, R.color.colorPrimaryDark)));
         }
-
+*/
         Util.requestPermission(this, Manifest.permission.RECORD_AUDIO);
         Util.requestPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
     }
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_RECORD_AUDIO) {
             if (resultCode == RESULT_OK) {
-                Toast.makeText(this, "Audio recorded successfully!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Audio recorded successfully!\nstorage/emulated/0", Toast.LENGTH_SHORT).show();
             } else if (resultCode == RESULT_CANCELED) {
                 Toast.makeText(this, "Audio was not recorded", Toast.LENGTH_SHORT).show();
             }
@@ -102,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
         dialog.setCancelable(true);
         dialog.setContentView(mylayout);
         dialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog);
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         Button dissmiss = (Button) dialog.findViewById(R.id.dissmiss);
         dissmiss.setOnClickListener(new View.OnClickListener() {
             @Override
