@@ -7,7 +7,7 @@
 
 <android.support.v7.widget.CardView
     android:layout_width="270dp"
-    android:layout_height="200dp"
+    android:layout_height="300dp"
     app:cardBackgroundColor="@color/colorPrimary"
     app:cardCornerRadius="15dp">
 
@@ -20,19 +20,50 @@
         android:orientation="vertical">
 
     <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textColor="@color/titleColor"
         android:textSize="23dp"/>
 
-    <TextView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"
+            android:text="Current Version :  "/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:text="@string/app_ver"/>
+        </LinearLayout>
+
+        <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/textColor"
         android:layout_marginTop="10dp"
         android:textSize="18dp"
-        android:text="This app is Developed by Kamal Kishor Meena"/>
+        android:text="This app is Developed by Kamal Kishor Meena."/>
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColor"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:text="This Audio Recorder is based on simple UI and having all basic features for sound recording."/>
+
 
     </LinearLayout>
 
