@@ -7,22 +7,54 @@
     android:background="@color/colorPrimary"
     tools:context=".MainActivity">
 
-    <include layout="@layout/app_bar"
-        android:id="@+id/toolbar"/>
-
-    <Button
-        android:layout_width="200dp"
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:padding="10dp"
-        android:text="RECORD "
-        android:textSize="25dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@android:color/white"
-        android:onClick="recordAudio"
-        android:background="@drawable/btnbg"
-        android:elevation="60dp"
-        android:shadowColor="@color/recorderbg"/>
+        android:orientation="vertical">
+
+        <include layout="@layout/app_bar"
+            android:id="@+id/toolbar"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="30dp"
+            android:gravity="left"
+            android:text="What will you\nrecord today?"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="-20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/undraw_recording_lywr" />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="220dp"
+            android:background="@drawable/btnbg"
+            android:elevation="60dp"
+            android:onClick="recordAudio"
+            android:padding="10dp"
+            android:shadowColor="@color/recorderBg"
+            android:text="RECORD "
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+    </RelativeLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -39,8 +71,10 @@
         android:layout_height="wrap_content"
         android:textColor="#8D8D8D"
         android:textSize="15dp"
-        android:text="File Path : storage/emulated/0"
+        android:text="File Path : storage/emulated/0/Audio Recorder"
         android:gravity="center_horizontal"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="150dp"/>
+
+
 </RelativeLayout>
